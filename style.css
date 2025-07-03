@@ -1,0 +1,24 @@
+body {
+  background-color: #000000;
+  font-family: Arial, sans-serif;
+  text-align: left;
+  padding: 20px;
+}
+
+#title {
+  color: #00cccc; /* Tosca */
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.label {
+  color: #cccccc; /* White-gray for labels */
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.value {
+  color: #ffffff; /* Bright white for default values */
+  font-weight: bold;
+  font-size: 18px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LIVE STATS P/L</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2 id="title">LIVE STATS P/L</h2>
+  <p><span class="label">Deposit:</span> <span id="deposit" class="value"></span></p>
+  <p><span class="label">P/L:</span> <span id="pl" class="value"></span></p>
+  <p><span class="label">Target:</span> <span id="target" class="value"></span></p>
+
+  <script>
+    async function updateData() {
+      try {
+        const response = await fetch('pnl-data.json');
+        const data = await response.json();
+
+        document.getElementById("deposit").textContent = data.deposit;
+        document.getElementById("target").textContent = data.target;
+
+        const plEl = document.getElementById("pl");
+        plEl.textContent = data.pl;
+
+        if (data.pl.startsWith("+")) {
+          plEl.style.color = "#00ff00"; // green for profit
+        } else if (data.pl.startsWith("-")) {
+          plEl.style.color = "#ff4444"; // red for loss
+        } else {
+          plEl.style.color = "#ffffff"; // default
+        }
+      } catch (e) {
+        console.error("Failed to fetch PNL data:", e);
+      }
+    }
+
+    updateData();
+    setInterval(updateData, 10000); // refresh every 10s
+  </script>
+</body>
+</html>
