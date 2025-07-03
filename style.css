@@ -1,6 +1,17 @@
 body {
-  background-color: #000000;
-  color: #66ffcc;
+  font-family: 'Courier New', monospace;
+  background-color: #0d0d0d;
+  color: #00ff99;
+  font-size: 22px;
+  padding: 20px;
+  margin: 0;
+}
+
+#pnl-box {
+  border: 2px solid #00ff99;
+  border-radius: 12px;
+  padding: 20px;
+  width: 400px;
 }
 
 #title {
