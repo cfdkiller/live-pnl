@@ -1,8 +1,20 @@
 body {
-  background-color: rgba(0, 0, 0, 1);
+  background-color: transparent; /* Biarkan body transparan */
   font-family: Arial, sans-serif;
-  text-align: left;
-  padding: 20px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Ini box utama */
+#container {
+  background-color: rgba(0, 0, 0, 0.6); /* Transparan hitam */
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.4); /* Opsional efek glow */
 }
 
 #title {
