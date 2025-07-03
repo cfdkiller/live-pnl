@@ -8,7 +8,7 @@ body {
 }
 
 #pnl-box {
-  background-color: rgba(0, 0, 0, 0.3); /* Hitam transparan tipis */
+  background-color: rgba(0, 0, 0, 0.95); /* Hitam transparan tipis */
   border-radius: 8px;
   padding: 20px;
   max-width: 280px;
